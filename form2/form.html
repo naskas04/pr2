@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./form.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script src="./showAge.js"></script>
+<body>
+    <div class="container">
+        <div style="display: flex; justify-content: center; margin-bottom: 5px;">
+            <b>Анкета Web-разработчика</b>
+        </div>
+        <form action="http://www.mysite.ru/lwd/process.php" method="post" id="my-form">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="name">Ваше имя:</label>
+                            <br>
+                            <label for="password">Пароль:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="name" id="name" style="margin-bottom: 5px;" required>
+                            <br>
+                            <input type="text" name="password" id="password" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="e-mail">E-mail:</label>
+                            <br>
+                            <label for="phone">Телефон:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="e-mail" id="e-mail" style="margin-bottom: 5px;" required>
+                            <br>
+                            <input type="text" name="phone" id="phone" required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="sex">Ваш пол:</label>
+                            <br>
+                            <label for="age">Ваш возраст:</label>
+                        </td>
+                        <td>
+                            <div id="sex" style="display: flex; justify-content: center; gap: 5px;">
+                                <input type="radio" id="male" name="sex" checked>
+                                <label for="male">М</label>
+                                <input type="radio" id="female" name="sex">
+                                <label for="female">Ж</label>
+                            </div>
+                            
+                            <br>
+                            <div style="text-align: center; display: flex; align-items: center; flex-direction: column;">
+                                <div>
+                                    18<input type="range" min="18" max="80" value="40" name="age" id="age" oninput="showAge(event.target.value)" required>80
+                                </div>    
+                                <span id="ageValue">40</span>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="spec">Ваша специализация:</label>
+                            <br>
+                            <label for="skills">Ваши навыки:</label>
+                        </td>
+                        <td>
+                            <input type="text" name="spec" id="spec" list="spec-list" style="margin-bottom: 5px;" required>
+                            <datalist id="spec-list">
+                                <option value="Web-дизайнер"></option>
+                            </datalist>
+                            <br>
+                            <input type="checkbox" name="skill_1" id="skill_1" required>
+                                <label for="skill_1">знание HTML</label>
+                                <br>
+                            <input type="checkbox" name="skill_2" id="skill_2" required>
+                                <label for="skill_2">знание Java</label>
+                                <br>
+                            <input type="checkbox" name="skill_3" id="skill_3" required>
+                                <label for="skill_3">знание PHP</label>
+                                <br>
+                            <input type="checkbox" name="skill_4" id="skill_4" required>
+                                <label for="skill_4">знание Adobe Photoshop</label>
+                                <br>
+                            <input type="checkbox" name="skill_5" id="skill_5" required>
+                                <label for="skill_5">знание Flash</label>
+                                <br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="info">Дополнительные сведения:</label>
+                        </td>
+                        <td>
+                            <textarea rows="5" name="info" id="info" style="overflow: auto;"></textarea>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <fieldset style=" display: flex; width: 420px; margin-top: 10px; background-color: rgb(182, 181, 181); text-align: center; justify-content: center; gap: 10px; height: 45px; border: 1px solid black;">
+                
+                <legend  style="font-size: 8pt;">Результаты надо:</legend>
+                
+                <div class="button-container">
+                    <button type="submit">Отправить</button>
+                </div>
+                <div class="button-container">
+                    <button onclick="document.getElementById('my-form').reset()">Удалить</button>
+                </div>
+
+            </fieldset>
+        </form>
+        
+        
+    </div>
+    
+    
+</body>
+</html>

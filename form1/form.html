@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="form.css">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+  </head>
+  <body>
+    <form action="" method="get" id="my-form">
+      <fieldset>
+        <legend>Контактная информация</legend>
+        
+          
+          <p>
+            <label for="name">Имя:</label>
+            <input type="text" name="name" id="name" required>
+          </p>
+          <p>
+            <label for="name">Фамилия:</label>
+            <input type="text" name="surname" id="surname"  required>
+          </p>
+          <p>
+            <label>Год рождения:
+                <select name="year" id="year" required>
+                    <option value="Naples">2000</option>
+                    <option value="Naples">2001</option>
+                    <option value="Naples">2002</option>
+                    <option value="Naples">2003</option>
+                    <option value="Naples">2004</option>
+                    <option value="Naples">2005</option>
+                    <option value="Naples">2006</option>
+                    <option value="Naples">2007</option>
+                    <option value="Naples">2008</option>
+                    <option value="Naples">2009</option>
+                    <option value="Naples">2010</option>
+                    <option value="Naples">2011</option>
+                    <option value="Naples">2012</option>
+                    <option value="Naples">2013</option>
+                    <option value="Naples">2014</option>
+                    <option value="Naples">2015</option>
+                    <option value="Naples">2016</option>
+                    <option value="Naples">2017</option>
+                </select>
+            </label>
+          </p>
+          <p>
+            <label for="city">Город:</label>
+            <input type="text" name="city" id="city" required>
+          </p>
+          <p>
+            <label>Пол:
+                <input type="radio" id="female" name="sex">
+                <label for="female">Женский</label>
+                <input type="radio" id="male" name="sex" checked>
+                <label for="male">Мужской</label>
+            </label>
+          </p>
+      </fieldset>
+        <br>
+        <textarea rows="10" cols="40" placeholder="Информация о заказе"></textarea>
+        
+        <br>
+        <input type="checkbox" id="marketing" name="marketing">
+        <label for="marketing">Я хочу получать рекламу</label>
+      
+        <br>
+
+        <input type="checkbox" id="privacy" name="privacy" checked disabled>
+        <label for="privacy">Я хочу, чтобы мои данные раздавались всем подряд</label>
+        
+      <p>
+        <button onclick="document.getElementById('my-form').reset()">Очистить</button>
+        <button type="submit">Отправить!</button>
+      </p>
+    </form>
+    
+        
+    
+      
+      
+      
+        
+  </body>
+</html>
